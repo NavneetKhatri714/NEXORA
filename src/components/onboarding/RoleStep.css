@@ -1,0 +1,75 @@
+.role-search {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  color: var(--text-primary);
+  font-size: 14.5px;
+  outline: none;
+  margin-top: 26px;
+}
+
+.role-search:focus {
+  border-color: var(--accent-cyan);
+}
+
+.role-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.role-card {
+  text-align: left;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.role-card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
+
+.role-card.is-selected {
+  border-color: var(--accent-cyan);
+  background: rgba(77, 216, 255, 0.08);
+  box-shadow: var(--shadow-glow-cyan);
+}
+
+.role-card h4 {
+  font-size: 15.5px;
+  font-family: var(--font-display);
+}
+
+.role-card p {
+  margin-top: 6px;
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.role-custom {
+  margin-top: 18px;
+}
+
+.role-custom__toggle {
+  background: none;
+  border: none;
+  color: var(--accent-cyan);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 560px) {
+  .role-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,83 @@
+.onboarding {
+  position: relative;
+  min-height: 100vh;
+  padding: 48px 24px 80px;
+}
+
+.onboarding__orb {
+  width: 480px;
+  height: 480px;
+  background: var(--accent-violet);
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.3;
+}
+
+.onboarding__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.onboarding__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.onboarding__progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.onboarding__dot {
+  width: 34px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s;
+}
+
+.onboarding__dot.is-active {
+  background: var(--gradient-primary);
+}
+
+.onboarding__dot.is-done {
+  background: var(--accent-cyan);
+}
+
+.onboarding__step-label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.onboarding-card {
+  padding: 40px;
+}
+
+.onboarding-card h2 {
+  font-size: 28px;
+}
+
+.onboarding-card__sub {
+  color: var(--text-secondary);
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.onboarding__nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  gap: 12px;
+}
+
+@media (max-width: 640px) {
+  .onboarding-card {
+    padding: 26px 20px;
+  }
+}
