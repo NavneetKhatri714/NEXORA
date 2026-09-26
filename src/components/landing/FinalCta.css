@@ -1,0 +1,41 @@
+.final-cta__panel {
+  position: relative;
+  text-align: center;
+  padding: 72px 40px;
+  overflow: hidden;
+}
+
+.final-cta__orb {
+  width: 500px;
+  height: 500px;
+  background: var(--gradient-glow);
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.final-cta__panel h2 {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(28px, 4vw, 42px);
+  margin-top: 18px;
+}
+
+.final-cta__panel > p {
+  position: relative;
+  z-index: 1;
+  color: var(--text-secondary);
+  font-size: 17px;
+  max-width: 520px;
+  margin: 16px auto 0;
+}
+
+.final-cta__actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 34px;
+  flex-wrap: wrap;
+}

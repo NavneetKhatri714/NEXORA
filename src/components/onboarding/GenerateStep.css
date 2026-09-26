@@ -1,0 +1,92 @@
+.generate-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0 10px;
+}
+
+.generate-orb {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(155, 107, 255, 0.1);
+  border: 1px solid rgba(155, 107, 255, 0.35);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--accent-violet);
+  transition: color 0.4s, border-color 0.4s, background 0.4s;
+}
+
+.generate-orb.is-done {
+  color: var(--accent-green);
+  border-color: rgba(53, 230, 160, 0.4);
+  background: rgba(53, 230, 160, 0.1);
+}
+
+.generate-orb__ring {
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: var(--accent-cyan);
+  animation: spin 1.6s linear infinite;
+}
+
+.generate-orb__ring--2 {
+  inset: -20px;
+  border-top-color: var(--accent-violet);
+  animation-duration: 2.4s;
+  animation-direction: reverse;
+}
+
+.generate-orb.is-done .generate-orb__ring,
+.generate-orb.is-done .generate-orb__ring--2 {
+  animation-play-state: paused;
+  opacity: 0.15;
+}
+
+.generate-step h3 {
+  margin-top: 26px;
+  font-size: 22px;
+}
+
+.generate-checklist {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.generate-checklist li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+  color: var(--text-muted);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out), color 0.3s;
+}
+
+.generate-checklist li.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  color: var(--text-primary);
+}
+
+.generate-checklist__mark {
+  color: var(--accent-green);
+  font-weight: 700;
+}
+
+.generate-step__cta {
+  margin-top: 32px;
+}

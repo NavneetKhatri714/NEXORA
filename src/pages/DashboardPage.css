@@ -1,0 +1,30 @@
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboard-main {
+  flex: 1;
+  min-width: 0;
+  padding: 40px 44px 80px;
+}
+
+.dashboard-topbar h1 {
+  font-size: 26px;
+}
+
+.dashboard-topbar p {
+  margin-top: 8px;
+  color: var(--text-secondary);
+  font-size: 14.5px;
+}
+
+.dashboard-section {
+  margin-top: 28px;
+}
+
+@media (max-width: 900px) {
+  .dashboard-main {
+    padding: 90px 20px 60px;
+  }
+}
